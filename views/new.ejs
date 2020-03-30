@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Hosted Simple Ledger Protocol (SLP) token icons.">
+        <title><%=title%></title>
+        <%- include('./templates/style') %>
+    </head>
+    <body>
+        <h2>New Icon Application</h2>
+        <p>After uploading your token icons here, it will take about 1-5 days to review if it is "appropriate" (see requirements) and if applicable you provide the proof needed to verify you are in fact associated with the token creators.</p>
+        <hr/>
+        <h2>Application</h2>
+        <label for="token_id">Enter TokenID</label>
+        <input id="token_id" type="text" placeholder="Token ID (eg: 4de69e374a8ed21c...)">
+        <label for="comment">Comment (optional)</label>
+        <input id="comment" type="text" placeholder="See the third 'Requirement' in the list below.">
+        <label for="token_icon">Select Image</label>
+        <input id="token_icon" type="file" onchange="encodeImageFileAsURL();" />
+        <div id="icon_preview"></div>
+        <hr/>
+        <h2>Requirements</h2>
+        <ol>
+            <li>Token icon <u><b>must not</b></u> be pornographic in nature or contain any amount of real or life-like nudity.</li>
+            <li>Token icon <u><b>must</b></u> be larger than or equal to 128x128 pixels and <u><b>should</b></u> have a blank (transparent) background.</li>
+            <li>For high profile tokens you <u><b>must</b></u> provide proof of ownership or a means of contacting you for verification.</li>
+        </ol>
+        <hr/>
+        <p><a target="_blank" href="https://github.com/kosinusbch/slp-token-icons">View on GitHub</a></p>
+    </body>
+    <script type='text/javascript'>
+    function encodeImageFileAsURL() {
+
+        var filesSelected = document.getElementById("token_icon").files;
+        if (filesSelected.length > 0) {
+            var fileToLoad = filesSelected[0];
+            var fileReader = new FileReader();
+
+            fileReader.onload = function(fileLoadedEvent) {
+                var srcData = fileLoadedEvent.target.result;
+                document.getElementById("icon_preview").innerHTML = '<img style="margin: 8px 0px 0px 0px;width:128px;height:128px;" src="'+srcData+'">';
+            }
+
+            fileReader.readAsDataURL(fileToLoad);
+        }
+    }
+    </script>
+</html>
