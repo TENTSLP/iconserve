@@ -24,11 +24,11 @@ let resize = function(path, format, width, height) {
 }
 
 app.get('/', function(req, res) {
-    res.render('index', { title: 'SLP Token Icon Endpoint' })
+    res.render('index', { title: 'TENTSLP Token Icon Endpoint' })
 })
 
 app.get('/new', function(req, res) {
-    res.render('new', { title: 'Add New Icon - SLP Token Icon Endpoint' })
+    res.render('new', { title: 'Add New Icon - TENTSLP Token Icon Endpoint' })
 })
 
 app.get('/:size/:tokenid.:format', (req, res) => {

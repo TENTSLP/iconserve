@@ -1,14 +1,14 @@
 {
   "name": "iconserve",
   "version": "1.0.0",
-  "description": "Serve BCH token icons",
+  "description": "Serve TENT token icons",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kosinusbch/iconserve.git"
+    "url": "git+https://github.com/TENTSLP/iconserve.git"
   },
   "keywords": [
     "bch",
@@ -18,9 +18,9 @@
   "author": "KosinusBCH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kosinusbch/iconserve/issues"
+    "url": "https://github.com/TENTSLP/iconserve/issues"
   },
-  "homepage": "https://github.com/kosinusbch/iconserve#readme",
+  "homepage": "https://github.com/TENTSLP/iconserve#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
